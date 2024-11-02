@@ -7,7 +7,7 @@ import ReactMarkdown from "react-markdown";
 
 export default function Home() {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
-    api: "/api/groqai",
+    api: "/api/openai",
   });
 
   return (
@@ -36,7 +36,7 @@ export default function Home() {
         <form onSubmit={handleSubmit} className="mt-auto relative">
           <Textarea
             className="w-full text-lg"
-            placeholder="Message Groq AI..."
+            placeholder="Message LLM"
             value={input}
             onChange={handleInputChange}
           />
